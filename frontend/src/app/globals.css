@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	box-sizing: border-box;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+	--primary-button-background: #C1CFA1;
+	--primary-button-color: #1c2215;
+	--primary-button-hover: #dae9b9;
+	--secondary-color: #E7CCCC;
+	--secondary-color-hover: #df9898;
+	--grayish-light-green: #A5B68D;
+	--beige: #F1F8E8;
+	--light-green: #ACD793;
+	--darker-green: #799767;
+	--darkest-green: #4e693f;
+	--black: rgb(19, 19, 19);
+	--white: rgb(253, 253, 253);
+	--box-shadow: 0px 5px 7px #0000002c;
+	--warning-background: #ff8d8d;
+	--warning-border: #bd6666;
+}
+
+.p-button {
+	color: #ffffff;
+	width: auto;
+	padding: .3rem .9rem;
+	margin: .4rem;
+	border-radius: .5rem;
+	background: var(--primary-button-background);
+}
+
+.p-button.add-button {
+	background-color: var(--secondary-color-hover);
+}
+
+.pi {
+	padding: 0rem .3rem 0rem 0rem;
+}
+
+.p-button:hover {
+	color: #ffffff;
+	background: var(--grayish-light-green);
+	box-shadow: 0 0 0 0.1rem var(--darker-green);
+}
+
+.p-button:focus {
+	box-shadow: 0 0 0 2px var(--darkest-green);
+}
+
+.p-button.cancelButton {
+	border-radius: .5rem;
+	background-color: var(--warning-background);
+}
+
+.p-button.cancelButton:hover {
+	box-shadow: 0 0 0 0.1rem var(--warning-border);
+}
+
+.p-button.saveButton {
+	border-radius: .5rem;
+	background-color: var(--darker-green);
+}
+
+.p-button.saveButton:hover {
+	box-shadow: 0 0 0 0.1rem var(--darkest-green);
+}
+
+.p-inputtext {
+	width: auto;
+	padding: .3rem .9rem;
+	margin: .4rem;
+	background: var(--white);
+	border: .1rem solid var(--primary-button-hover);
+}
+
+.p-inputtext:enabled:focus {
+	outline: 0 none;
+	outline-offset: 0;
+	box-shadow: 0 0 0 0.2rem var(--grayish-light-green);
+}
+
+.p-confirm-popup .p-confirm-popup-footer button:last-child {
+	background-color: var(--darker-green);
+}
+
+.p-confirm-popup .p-confirm-popup-footer button {
+	background-color: var(--warning-background);
+}
+
+.p-dialog {
+	background-color: var(--beige) !important;
+	border: .1rem solid var(--primary-button-hover);
+	padding: 2rem;
+	border-radius: .5rem;
+}
