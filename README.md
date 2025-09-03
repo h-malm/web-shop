@@ -1,3 +1,5 @@
+#Web Shop
+
 Run the project:
 
 cd to root of project
@@ -14,4 +16,3 @@ npm install --include-dev
 npm run dev
 
 then navigate to localhost:3000
-# web-shop
