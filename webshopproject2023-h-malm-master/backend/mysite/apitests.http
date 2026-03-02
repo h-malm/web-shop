@@ -1,0 +1,29 @@
+#GET cards
+GET http://127.0.0.1:8000/cards/
+
+###
+#Authenticate and get Token
+POST http://127.0.0.1:8000/api/token/
+Content-Type: application/json
+
+{
+  "username": "user1",
+  "password": "pass1"
+}
+
+### get list of cards for user
+GET http://127.0.0.1:8000/api/auth-cards/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNjc2NjIyLCJpYXQiOjE3MDE2NzYzMjIsImp0aSI6IjQzODVmYzgzMWI4ODQzMjNiNDM3YmEyY2IyM2JlMGZjIiwic3ViIjo0fQ.wpX9TKtnRy5IoKZnEBmhRLmTm9F7NAac2bfkuVtZaZg
+
+###Authenticate and get Token
+POST http://127.0.0.1:8000/api/token/
+Content-Type: application/json
+
+{
+  "username": "user2",
+  "password": "pass2"
+}
+
+### get list of cards for user2
+GET http://127.0.0.1:8000/api/auth-cards/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNjc3MzcyLCJpYXQiOjE3MDE2NzcwNzIsImp0aSI6ImY5YTU4ZTQ5YWFkNDRkYWI4NGFmZmMxZGY0OWZhMzZlIiwic3ViIjo1fQ.0uXUPbTj5Wn-oco0PffONdzgO5e60wBbs3ADJOXuIOs
