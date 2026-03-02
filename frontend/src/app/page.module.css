@@ -1,0 +1,213 @@
+.outerDivStyle {
+    width: 65%;
+	margin: auto;
+    padding: 2rem;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--primary-button-hover);
+    box-shadow: 0 5px var(--darkestRed),
+        0 -5px var(--pixelbuttonBackground),
+        5px 0 var(--pixelbuttonBackground),
+        -5px 0 var(--pixelbuttonBackground),
+        0 10px var(--pixelbuttonBackground),
+        5px 5px var(--pixelbuttonBackground),
+        -5px 5px var(--pixelbuttonBoxShadow),
+        inset 0 5px #00000036;
+}
+
+.navBar {
+    display: inline-block;
+    background-color: var(--grayish-light-green);
+    width: 46rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 2rem ;
+    font-size: 1rem;
+    border-radius: 3rem;
+    padding: 0.4rem;
+    box-shadow: var(--box-shadow);
+}
+
+.navItem {
+    width: auto;
+    height: 100%;
+    align-content: center;
+    display: inline-block;
+    position: relative;
+}
+
+.navItem:hover {
+    background-color: var(--primary-button-hover);
+    cursor: pointer;
+    border-radius: 3rem;
+    box-shadow: 0 0 0 0.1rem var(--darker-green);
+
+    .links {
+        color: var(--black);
+    }
+}
+
+.links {
+    color: white;
+    text-decoration: none;
+    padding: 2rem 2rem;
+}
+
+.logoutAndPopulate {
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+}
+
+.innerDivStyle {
+    margin: 1rem;
+    display: block;
+}
+
+.mainHeader {
+    font-size: 3rem;
+    font-weight: 800;
+    width: 100%;
+    height: 6rem;
+    margin: auto 0.5rem;
+    display: inline-block;
+    align-content: center;
+    color: var(--darker-green);
+}
+
+.subHeader {
+    font-size: 2rem;
+    font-weight: 800;
+    height: 100%;
+    margin: auto 0.5rem;
+    display: inline-block;
+    align-content: center;
+    color: var(--darker-green);
+}
+
+.subSubHeader {
+    font-size: 2rem;
+    font-weight: 800;
+    height: 3rem;
+    margin: auto 0.5rem;
+    display: inline-block;
+    align-content: center;
+    color: var(--darker-green);
+}
+
+.cartStyle {
+    background-color: var(--beige);
+    border-radius: .6rem;
+    border: .1rem solid var(--primary-button-hover);
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    width: 25rem;
+    position: fixed;
+    top: 5rem;
+    right: 2rem;
+    overflow: hidden;
+    height: 17rem;
+    resize: vertical;
+    z-index: 2;
+}
+
+.cartScrollable {
+    height: 80%;
+    overflow: auto;
+}
+
+.cardInCart {
+    height: 8rem;
+    margin: 1rem 0rem;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: .5rem;
+}
+
+.infoOfCardInCart {
+    display: inline-block;
+    width: 70%;
+    height: 100%;
+    margin-top: 0;
+}
+
+.deleteFromCart {
+    border-radius: .5rem;
+    color: red;
+    margin-top: .5rem;
+    border: 2px solid red;
+    background-color: rgb(255, 255, 255);
+    padding: .1rem .4rem;
+}
+
+.deleteFromCart:hover {
+    background-color: rgb(240, 230, 230);
+}
+
+.squareInCart {
+    display: inline-block;
+    height: 85%;
+    width: 30%;
+    border-radius: .2rem;
+}
+
+.squareInBrowse {
+    height: 10rem;
+    border-radius: .5rem;
+}
+
+.cardInCart:hover {
+    cursor: pointer;
+}
+
+.inlineBlock {
+    display: inline-block;
+}
+
+.cardStyle {
+    width: 16rem;
+    height: 27rem;
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.cardStyle:hover {
+    cursor: pointer;
+}
+
+.Label {
+    height: auto;
+    margin: .6rem .2rem;
+}
+
+.login {
+    background-color: var(--beige);
+    border-radius: .5rem;
+    height: auto;
+    width: 30rem;
+    align-content: center;
+    text-align: center;
+    padding: 3rem;
+    margin: 2rem;
+}
+
+.browseDiv {
+    background-color: var(--beige);
+    border-radius: .5rem;
+    padding: 1rem;
+    margin: 2rem 0rem;
+}
+
+.pairOfButtons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+
+.spaceForTooltip {
+    margin-top: 2rem;
+}
