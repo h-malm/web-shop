@@ -5,7 +5,7 @@ import React from "react";
 export default function NavigationBar () {
     return (
         <>
-            <div className={styles.mainHeader}>Web Shop</div>
+            <div className={styles.mainHeader}>The Green Thumbelinas</div>
             <div className={styles.navBar}>
                 <div className={styles.navItem}>
                     <Link className={styles.links} href="/">HOME PAGE</Link>

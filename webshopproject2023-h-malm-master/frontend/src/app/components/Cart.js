@@ -11,6 +11,7 @@ export default function Cart ( props ) {
 
 	return (
 		<div className={styles.cartStyle} >
+
 			<div className={styles.subSubHeader}>
 				Cart: {props.items.length} products
 				<br />

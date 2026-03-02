@@ -39,7 +39,7 @@ export default function Card ( props ) {
 				{!props.isEditable && (
 					<Button
 						label="Add to Cart"
-						className="p-button 	saveButton"
+						className="p-button saveButton"
 					/>
 				)}
 				{props.isEditable && (
@@ -49,12 +49,13 @@ export default function Card ( props ) {
 						className="p-button saveButton"
 					/>
 				)}
-				{props.isDeletable && ( <Button
-					severity="danger"
-					label="Delete"
-					onClick={handleDelete}
-					className="p-button cancelButton"
-				/>
+				{props.isDeletable && (
+					<Button
+						severity="danger"
+						label="Delete"
+						onClick={handleDelete}
+						className="p-button cancelButton"
+					/>
 				)}
 			</div>
 		</div>
