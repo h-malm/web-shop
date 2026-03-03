@@ -239,36 +239,36 @@ export default function BrowseCards () {
         <>
             <div>
                 <Cart items={cart} deleteHandler={removeItem} />
+
                 <div className={styles.subHeader}>
                     Browse Cards
+                </div><div className={styles.searchDiv}>
+                    <form
+                        onSubmit={( e ) => {
+                            e.preventDefault();
+                            const form = e.target;
+                            // @ts-ignore
+                            const formData = new FormData( form );
+                            // @ts-ignore
+                            const formJson = Object.fromEntries( formData.entries() );
+                            setSearchTerm( formJson.search.toString() );
+                            init();
+                        }}
+                    >
+                        <InputText
+                            className="p-input"
+                            placeholder="Search for titles"
+                            type='text'
+                            name='search'
+                        />
+                        <Button
+                            className="p-button"
+                            type='submit'
+                            label='Search'
+                        />
+                    </form>
                 </div>
                 <div className={styles.browseDiv} >
-                    <div className={styles.searchDiv}>
-                        <form
-                            onSubmit={( e ) => {
-                                e.preventDefault();
-                                const form = e.target;
-                                // @ts-ignore
-                                const formData = new FormData( form );
-                                // @ts-ignore
-                                const formJson = Object.fromEntries( formData.entries() );
-                                setSearchTerm( formJson.search.toString() );
-                                init();
-                            }}
-                        >
-                            <InputText
-                                className="p-input"
-                                placeholder="Search for titles"
-                                type='text'
-                                name='search'
-                            />
-                            <Button
-                                className="p-button"
-                                type='submit'
-                                label='Search'
-                            />
-                        </form>
-                    </div>
                     <div className={styles.logoutAndPopulate}>
                         {isLoggedIn ? (
                             <div className={styles.inlineBlock}>
@@ -282,14 +282,12 @@ export default function BrowseCards () {
                         ) : (
                             <></>
                         )}
-                        <div className={styles.inlineBlock}>
-                            <Button
-                                ref={buttonEl}
-                                className="p-button"
-                                onClick={handlePopulateButton}
-                                label='Repopulate Database'
-                            />
-                        </div>
+                        <Button
+                            ref={buttonEl}
+                            className="p-button"
+                            onClick={handlePopulateButton}
+                            label='Repopulate Database'
+                        />
                     </div>
 
                     <ConfirmPopup

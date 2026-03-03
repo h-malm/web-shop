@@ -60,7 +60,7 @@ const AccountPage = () => {
             </div>
 
             {isLoggedIn ? (
-                <div className={styles.login}>
+                <div className={styles.loginContainer}>
                     <form onSubmit={handleChangePassword}>
                         <div>
                             <InputText

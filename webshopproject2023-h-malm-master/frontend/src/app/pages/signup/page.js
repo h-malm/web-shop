@@ -29,7 +29,7 @@ const RegisterPage = () => {
 				<div className={styles.subHeader}>
 					Register a new User
 				</div>
-				<div className={styles.login}>
+				<div className={styles.loginContainer}>
 					<form
 						onSubmit={( e ) => {
 							e.preventDefault();

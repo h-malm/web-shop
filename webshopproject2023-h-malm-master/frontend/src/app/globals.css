@@ -4,19 +4,23 @@
 }
 
 :root {
-	--primary-button-background: #88b422;
+	--primary-button-background: #688e0f;
 	--primary-button-color: #1c2215;
-	--primary-button-hover: #dae9b9;
-	--secondary-color: #E7CCCC;
-	--secondary-color-hover: #df9898;
-	--grayish-light-green: #3e8533;
-	--beige: #F1F8E8;
+	--primary-button-hover: #d3e9a4;
+	--secondary-color: #e99898;
+	--secondary-color-hover: #7a4040;
+	--light-pink: #debdbd;
+	--darker-pink: #733434;
+	--light-yellow: #fbfcdc;
+	--dark-yellow: #c7c97b;
 	--light-green: #405931;
+	--grayish-light-green: #25711a;
 	--darker-green: #39691a;
 	--darkest-green: #123002;
+	--gray: rgb(107, 124, 101);
 	--black: rgb(19, 19, 19);
 	--white: rgb(253, 253, 253);
-	--box-shadow-darker-green: 
+	--box-shadow-green: 
 		0 3px var(--darker-green),
         0 -3px var(--darker-green),
         3px 0 var(--darker-green),
@@ -24,6 +28,30 @@
         0 0px var(--darker-green),
         3px 0px var(--darker-green),
         -3px 0px var(--darker-green);
+	--box-shadow-darker-red: 
+		0 3px var(--darker-pink),
+        0 -3px var(--darker-pink),
+        3px 0 var(--darker-pink),
+        -3px 0 var(--darker-pink),
+        0 0px var(--darker-pink),
+        3px 0px var(--darker-pink),
+        -3px 0px var(--darker-pink);
+	--box-shadow-yellow: 
+		0 3px var(--dark-yellow),
+        0 -3px var(--dark-yellow),
+        3px 0 var(--dark-yellow),
+        -3px 0 var(--dark-yellow),
+        0 0px var(--dark-yellow),
+        3px 0px var(--dark-yellow),
+        -3px 0px var(--dark-yellow);
+	--box-shadow-gray: 
+		0 3px var(--gray),
+        0 -3px var(--gray),
+        3px 0 var(--gray),
+        -3px 0 var(--gray),
+        0 0px var(--gray),
+        3px 0px var(--gray),
+        -3px 0px var(--gray);
 	--warning-background: #ff8d8d;
 	--warning-border: #bd6666;
 }
@@ -39,7 +67,7 @@ body {
 	width: auto;
 	margin: .5rem;
 	padding: .3rem .9rem;
-	box-shadow: var( --box-shadow-darker-green);
+	box-shadow: var( --box-shadow-green);
 	background: var(--primary-button-background);
 	border-radius: 0px;
 	border: none;
@@ -56,30 +84,30 @@ body {
 .p-button:hover {
 	color: #ffffff;
 	background: var(--grayish-light-green);
-	box-shadow: var( --box-shadow-darker-green);
+	box-shadow: var( --box-shadow-green);
 }
 
 .p-button:focus {
-	box-shadow: var( --box-shadow-darker-green);
+	box-shadow: var( --box-shadow-green);
 }
 
 .p-button.cancelButton {
-	box-shadow: var( --box-shadow-darker-green);
+	box-shadow: var( --box-shadow-green);
 	background-color: var(--warning-background);
 }
 
 .p-button.cancelButton:hover {
-	box-shadow: var( --box-shadow-darker-green);
+	box-shadow: var( --box-shadow-green);
 }
 
 .p-button.saveButton {
-	box-shadow: var( --box-shadow-darker-green);
+	box-shadow: var( --box-shadow-green);
 	z-index: 1;
 	background-color: var(--darker-green);
 }
 
 .p-button.saveButton:hover {
-	box-shadow: var( --box-shadow-darker-green);
+	box-shadow: var( --box-shadow-green);
 		background-color: var(--darkest-green);
 }
 
@@ -88,14 +116,14 @@ body {
 	padding: .3rem .9rem;
 	margin: .4rem;
 	background: var(--white);
-	box-shadow: var( --box-shadow-darker-green);
+	box-shadow: var( --box-shadow-darker-red);
 	border-radius: 0px;
 }
 
 .p-inputtext:enabled:focus {
 	outline: 0 none;
 	outline-offset: 0;
-	box-shadow: var( --box-shadow-darker-green);
+	box-shadow: var( --box-shadow-green);
 }
 
 .p-confirm-popup .p-confirm-popup-footer button:last-child {
@@ -107,8 +135,8 @@ body {
 }
 
 .p-dialog {
-	background-color: var(--beige) !important;
+	background-color: var(--light-yellow) !important;
 	border: .1rem solid var(--primary-button-hover);
 	padding: 2rem;
-	box-shadow: var( --box-shadow-darker-green);
+	box-shadow: var( --box-shadow-green);
 }

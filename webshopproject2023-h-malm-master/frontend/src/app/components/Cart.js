@@ -13,7 +13,7 @@ export default function Cart ( props ) {
 		<div className={styles.cartStyle} >
 
 			<div className={styles.subSubHeader}>
-				Cart: {props.items.length} products
+				Cart: {props.items.length} items
 				<br />
 				Total Price: {totalPrice}€
 			</div>

@@ -304,7 +304,7 @@ const MyItemsPage = () => {
                 <div>
                     <div>
                         <div className={styles.subSubHeader}>
-                            Signed in as &rdquo;{username}&rdquo;
+                            Signed in as {username}
                         </div>
                     </div>
                     <div>
@@ -332,7 +332,7 @@ const MyItemsPage = () => {
                     <div className={styles.subHeader}>
                         Sign in to see your items
                     </div>
-                    <div className={styles.login}>
+                    <div className={styles.loginContainer}>
                         <div>
                             <InputText
                                 className={styles.styleInput}

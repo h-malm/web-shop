@@ -3,16 +3,14 @@ import styles from "./../page.module.css";
 
 export default function Label ( props ) {
 	return <div className={styles.Label}>
-		Title: {props.lTitle}
+		{props.lTitle}, {props.lPrice}€
 		<br />
-		Price: {props.lPrice}€
+		{props.lDescription}
 		<br />
-		Description: {props.lDescription}
+		{props.lOwner}
 		<br />
-		Seller: {props.lOwner}
+		Published: {props.lDateAdded}
 		<br />
-		Date Added: {props.lDateAdded}
-		<br />
-		Status: {props.lStatus}
+		{props.lStatus}
 	</div>;
 }

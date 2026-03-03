@@ -37,7 +37,6 @@ urlpatterns = [
     path("nicegreat/<str:name>/", views.nicergreat),
     path("cards/<int:count>/", views.cards),
     path("api/", include(router.urls)),
-    path("api/login/", views.LoginView.as_view()),
     path("api/register/", views.RegisterView.as_view()),
     path("api/me/", views.AboutMeView.as_view()),
     path("api/me-session/", views.SessionAboutMeView.as_view()),

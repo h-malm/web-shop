@@ -5,6 +5,7 @@ import NavigationBar from "./components/NavigationBar";
 import 'primereact/resources/themes/lara-light-cyan/theme.css';
 import 'primereact/resources/primereact.min.css';
 import React from "react";
+import LoginPage from "./components/Login";
 
 export default function Home () {
 
@@ -12,6 +13,7 @@ export default function Home () {
 		<main>
 			<div className={styles.outerDivStyle}>
 				<NavigationBar></NavigationBar>
+				<LoginPage />
 				<div className={styles.innerDivStyle}>
 					<BrowseCards></BrowseCards>
 				</div>

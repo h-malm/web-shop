@@ -45,7 +45,11 @@ def populate(request):
         color_list = [ 
                       'mistyrose', 
                       'thistle', 
-                      'slategray' 
+                      'slategray', 
+                      'CadetBlue', 
+                      'DarkOliveGreen', 
+                      'DarkKhaki',
+                      'LightSalmon' 
                     ]
         price_list = [ 
                       '39', 
@@ -72,7 +76,7 @@ def populate(request):
                       'A plant with soft, shiny leaves.' 
                     ]
         for n in range( no_u ):
-            user = User.objects.create_user( "testuser{}".format( n ), "testuser{}@shop.aa".format( n ), "pass{}".format(n))
+            user = User.objects.create_user( "Anonymous{}".format( n ), "anon{}@shop.aa".format( n ), "pass{}".format(n))
             user.save()
 
             for i in range( no_c ):
