@@ -242,7 +242,8 @@ export default function BrowseCards () {
 
                 <div className={styles.subHeader}>
                     Browse Cards
-                </div><div className={styles.searchDiv}>
+                </div>
+                <div className={styles.searchDiv}>
                     <form
                         onSubmit={( e ) => {
                             e.preventDefault();
@@ -302,7 +303,7 @@ export default function BrowseCards () {
                         accept={confirmAction}
                     />
                     <div>{msg} </div>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+                    <div className={styles.itemsGrid}>
                         {filteredItems}
                     </div>
                 </div>

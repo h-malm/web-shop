@@ -136,7 +136,7 @@
 }
 
 .squareInBrowse {
-    height: 10rem;
+    height: 8rem;
     box-shadow: var(--box-shadow-gray);
 }
 
@@ -149,8 +149,8 @@
 }
 
 .cardStyle {
-    width: 16rem;
-    height: 27rem;
+    width: auto;
+    height: 16rem;
     background-color: var(--white);
     padding: 1rem;
     box-shadow: var(--box-shadow-gray);
@@ -200,4 +200,32 @@
 .searchDiv {
     width: auto;
     float: inline-end;
+}
+
+.status {
+    padding: .2rem;
+    position: relative;
+    background-color: var(--darkest-green);
+    color: var(--white);
+    box-shadow: var(--box-shadow-gray);
+    bottom: 13.5rem;
+    left: .2rem;
+    width: 4rem;
+}
+
+.cardPrice {
+    font-size: 1.5rem;
+    position: relative;
+    bottom: 0rem;
+    right: 0rem;
+    font-weight: 800;
+}
+
+.itemsGrid {
+	flex-wrap: wrap;
+	gap: 3rem;
+	margin-left: auto;
+	display: flex;
+	margin-right: auto;
+	justify-content: center;
 }

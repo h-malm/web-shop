@@ -36,12 +36,6 @@ export default function Card ( props ) {
 				lStatus={props.cStatus}
 			/>
 			<div className={styles.pairOfButtons}>
-				{!props.isEditable && (
-					<Button
-						label="Add to Cart"
-						className="p-button saveButton"
-					/>
-				)}
 				{props.isEditable && (
 					<Button
 						label='Edit'
@@ -58,6 +52,12 @@ export default function Card ( props ) {
 					/>
 				)}
 			</div>
+			{!props.isEditable && (
+				<Button
+					label="Add to Cart"
+					className="p-button addButton"
+				/>
+			)}
 		</div>
 	);
 }
