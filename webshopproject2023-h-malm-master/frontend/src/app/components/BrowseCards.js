@@ -29,6 +29,8 @@ export default function BrowseCards () {
     const toast = useRef( null );
 
     const addItem = useCallback( async ( item ) => {
+        const currentUser = localStorage.getItem( 'username' );
+
         if ( currentUser && item.owner === currentUser ) {
             toast.current.show( {
                 severity: 'warn',
@@ -137,12 +139,16 @@ export default function BrowseCards () {
     useEffect( () => {
         const accessToken = localStorage.getItem( 'accessToken' );
         const refreshToken = localStorage.getItem( 'refreshToken' );
+        const username = localStorage.getItem( 'username' );
+
         if ( accessToken && refreshToken ) {
             setIsLoggedIn( true );
             setUserLoggedOut( false );
+            setCurrentUser( username );
         } else {
             setIsLoggedIn( false );
             setUserLoggedOut( true );
+            setCurrentUser( null );
         }
     }, [] );
 
@@ -217,18 +223,28 @@ export default function BrowseCards () {
     };
 
     const confirmAction = async () => {
-        if ( action === 'populate' ) {
+        if ( action === 'populate' && isLoggedIn ) {
             const res = await fetch( `${API_BASE}/populate/`, {
             } )
             const info = await res.json()
+            handleLogout();
+            await init();
             setMsg( info.message );
             toast.current.show( {
                 severity: 'info', detail: `${info.message}`
             } )
-            setTimeout( () => {
-                setMsg( null );
-            }, 5000 );
-            handleLogout();
+            setMsg( null );
+
+        } else if ( action === 'populate' && !isLoggedIn ) {
+            const res = await fetch( `${API_BASE}/populate/`, {
+            } )
+            const info = await res.json()
+            await init();
+            setMsg( info.message );
+            toast.current.show( {
+                severity: 'info', detail: `${info.message}`
+            } )
+            setMsg( null );
         } else if ( action === 'logout' ) {
             handleLogout();
         }

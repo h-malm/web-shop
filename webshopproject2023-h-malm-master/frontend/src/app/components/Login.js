@@ -34,6 +34,8 @@ const LoginPage = () => {
                     severity: 'info',
                     detail: `Logged in as '${username}'`
                 } );
+                setUsername( "" );
+                setPassword( "" );
             } else {
                 console.error( "Login failed" );
                 toast.current.show( {
@@ -51,57 +53,43 @@ const LoginPage = () => {
     useEffect( () => {
         const accessToken = localStorage.getItem( 'accessToken' );
         const refreshToken = localStorage.getItem( 'refreshToken' );
-        const savedUsername = localStorage.getItem( 'username' );
+        const isLoggedIn = localStorage.getItem( 'isLoggedIn' );
 
         if ( accessToken && refreshToken ) {
             setIsLoggedIn( true );
-            setUsername( savedUsername || "" );
         } else {
             setIsLoggedIn( false );
         }
     }, [] );
 
     return (
-        <div className={styles.loginContainer}>
-            {isLoggedIn ? (
-                <div>
-                    <div className={styles.subHeader}>
-                        Signed in as {username}
-                    </div>
+        <>
+            <div className={styles.loginContainer}>
+
+                <div className={styles.subHeader}>
+                    Sign in
                 </div>
-            ) : (
-                <div>
-                    <div className={styles.subHeader}>
-                        Sign in
-                    </div>
-                    <div>
-                        <InputText
-                            className={styles.styleInput}
-                            placeholder="Username"
-                            type="text"
-                            name="username"
-                            value={username}
-                            onChange={( e ) => setUsername( e.target.value )}
-                        />
-                    </div>
-                    <div>
-                        <InputText
-                            className={styles.styleInput}
-                            placeholder="Password"
-                            type="password"
-                            name="password"
-                            value={password}
-                            onChange={( e ) => setPassword( e.target.value )}
-                        />
-                    </div>
-                    <Button
-                        label="Sign in"
-                        className="p-button"
-                        onClick={authenticate} />
-                </div>
-            )}
-            <Toast ref={toast} />
-        </ div>
+                <InputText
+                    className={styles.styleInput}
+                    placeholder="Username"
+                    type="text"
+                    value={username}
+                    onChange={( e ) => setUsername( e.target.value )}
+                />
+                <InputText
+                    className={styles.styleInput}
+                    placeholder="Password"
+                    type="password"
+                    value={password}
+                    onChange={( e ) => setPassword( e.target.value )}
+                />
+                <Button
+                    label="Sign in"
+                    className="p-button"
+                    onClick={authenticate} />
+                <Toast ref={toast} />
+            </ div>
+        </>
     );
 };
 
